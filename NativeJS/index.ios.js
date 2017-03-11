@@ -9,15 +9,28 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NativeModules,
+  NativeEventEmitter,
 } from 'react-native';
+
+
+const {RNEventEmitterManager} = NativeModules;
+const kLoginSuccessEvent = "kLoginSuccessEvent";
+
+const rnEventEmitterManager = new NativeEventEmitter(RNEventEmitterManager);
+
+const subscription = rnEventEmitterManager.addListener(
+  kLoginSuccessEvent,
+  (info) => console.log(info)
+);
 
 export default class NativeJS extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          {this.props.account}
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
@@ -28,6 +41,9 @@ export default class NativeJS extends Component {
         </Text>
       </View>
     );
+  }
+  componentWillUnmount() {
+    // subscription.remove();
   }
 }
 
