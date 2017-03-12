@@ -21,20 +21,20 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="account" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Fs-Zv-mmr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10001" borderStyle="roundedRect" placeholder="请输入用户ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Fs-Zv-mmr">
                                 <rect key="frame" x="20" y="60" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P2-b9-jNm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P2-b9-jNm">
                                 <rect key="frame" x="20" y="110" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFT-RI-fzG">
-                                <rect key="frame" x="20" y="200" width="335" height="40"/>
+                                <rect key="frame" x="20" y="220" width="335" height="40"/>
                                 <color key="backgroundColor" red="0.26552148413758625" green="0.7079562500242037" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4qa-Qw-NQN"/>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB7-Lp-dTS">
-                                <rect key="frame" x="20" y="260" width="335" height="40"/>
+                                <rect key="frame" x="20" y="280" width="335" height="40"/>
                                 <color key="backgroundColor" red="0.097648866863963124" green="1" blue="0.12488145780768334" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="amY-rQ-Mf3"/>
@@ -61,27 +61,37 @@
                                     <action selector="pushToUserInfo:" destination="U8b-Jx-WHU" eventType="touchUpInside" id="HN4-1v-pwO"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xrj-gE-pUz">
+                                <rect key="frame" x="20" y="160" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cFT-RI-fzG" firstAttribute="top" secondItem="9P2-b9-jNm" secondAttribute="bottom" constant="60" id="9In-N8-enc"/>
                             <constraint firstItem="DB7-Lp-dTS" firstAttribute="leading" secondItem="QYI-7W-WIQ" secondAttribute="leading" constant="20" id="Afk-9X-Zcp"/>
                             <constraint firstItem="cFT-RI-fzG" firstAttribute="leading" secondItem="QYI-7W-WIQ" secondAttribute="leading" constant="20" id="DPd-es-4qB"/>
                             <constraint firstItem="0Fs-Zv-mmr" firstAttribute="leading" secondItem="QYI-7W-WIQ" secondAttribute="leading" constant="20" id="DU1-fA-XZC"/>
                             <constraint firstItem="9P2-b9-jNm" firstAttribute="top" secondItem="0Fs-Zv-mmr" secondAttribute="bottom" constant="20" id="DX1-xb-oig"/>
+                            <constraint firstItem="Xrj-gE-pUz" firstAttribute="leading" secondItem="QYI-7W-WIQ" secondAttribute="leading" constant="20" id="EyN-k9-ULu"/>
+                            <constraint firstAttribute="trailing" secondItem="Xrj-gE-pUz" secondAttribute="trailing" constant="20" id="HDu-5o-8pX"/>
                             <constraint firstAttribute="trailing" secondItem="DB7-Lp-dTS" secondAttribute="trailing" constant="20" id="Ln3-wD-SGJ"/>
                             <constraint firstItem="0Fs-Zv-mmr" firstAttribute="top" secondItem="UxF-RR-jnW" secondAttribute="bottom" constant="60" id="TOv-kO-nwm"/>
                             <constraint firstItem="DB7-Lp-dTS" firstAttribute="top" secondItem="cFT-RI-fzG" secondAttribute="bottom" constant="20" id="TaG-sQ-5Kp"/>
+                            <constraint firstItem="cFT-RI-fzG" firstAttribute="top" secondItem="Xrj-gE-pUz" secondAttribute="bottom" constant="30" id="eUS-mS-Xgz"/>
                             <constraint firstAttribute="trailing" secondItem="cFT-RI-fzG" secondAttribute="trailing" constant="20" id="gSH-Ib-30A"/>
                             <constraint firstAttribute="trailing" secondItem="0Fs-Zv-mmr" secondAttribute="trailing" constant="20" id="jJw-v0-H5v"/>
+                            <constraint firstItem="Xrj-gE-pUz" firstAttribute="top" secondItem="9P2-b9-jNm" secondAttribute="bottom" constant="20" id="tJw-JT-aAp"/>
                             <constraint firstAttribute="trailing" secondItem="9P2-b9-jNm" secondAttribute="trailing" constant="20" id="xvH-lW-Tst"/>
                             <constraint firstItem="9P2-b9-jNm" firstAttribute="leading" secondItem="QYI-7W-WIQ" secondAttribute="leading" constant="20" id="yBk-Zk-wIH"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="ttfAccount" destination="0Fs-Zv-mmr" id="i7T-Rk-c9Y"/>
-                        <outlet property="ttfPassword" destination="9P2-b9-jNm" id="Zre-jg-6QR"/>
+                        <outlet property="ttfToken" destination="Xrj-gE-pUz" id="9zR-Y1-bDh"/>
+                        <outlet property="ttfUserId" destination="0Fs-Zv-mmr" id="Wej-pm-38e"/>
+                        <outlet property="ttfUserName" destination="9P2-b9-jNm" id="wzT-O6-YRU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Lb-lT-sQX" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,10 +12,16 @@
 #import <React/RCTRootView.h>
 
 //NSString *const UCALoginSuccessNotification = @"LoginSuccessNotification";
+
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *ttfAccount;
 @property (weak, nonatomic) IBOutlet UITextField *ttfPassword;
+
+@property (weak, nonatomic) IBOutlet UITextField *ttfUserId;
+
+@property (weak, nonatomic) IBOutlet UITextField *ttfUserName;
+@property (weak, nonatomic) IBOutlet UITextField *ttfToken;
 
 
 @end
@@ -27,7 +33,7 @@
 // 模仿登录成功
 - (IBAction)loginSuccess:(id)sender {
   NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-  [center postNotificationName:@"LoginSuccessNotification" object:self userInfo:@{@"account": self.ttfAccount.text, @"password": self.ttfPassword.text}];
+  [center postNotificationName:@"LoginSuccessNotification" object:self userInfo:@{@"id": self.ttfUserId.text, @"name": self.ttfUserName.text, @"token": self.ttfToken.text}];
 }
 
 // 跳转到RN界面
